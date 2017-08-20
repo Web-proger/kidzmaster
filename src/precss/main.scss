@@ -1,7 +1,37 @@
+/*
+font-family: "Roboto", "Arial", sans-serif;
+font-family: "Roboto Slab", "Georgia", serif;
+font-family: "Dosis", "Arial", sans-serif;
+*/
 
+// Общие стили
+ul {
+  @include ul-style;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//Кнопки
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  @include fonts($rob, 16, 34, 500);
+  color: $main-color;
+  background-color: $second-color;
+  border-radius: 10px;
+  text-transform: uppercase;
+  &--inver {
+    color: $second-color;
+    background-color: $main-color;
+  }
+}
 
 //Header - Шапка
 .header {
+  @include fonts($dosis, 14, 25, 400);
   background-color: $main-color;
   color: $second-color;
 }
@@ -22,9 +52,21 @@
 
 
 //welcome - блок привествия
+.welcome {
+  background-color: $main-color;
+}
+.welcome__subtitle {
+  @include fonts($dosis, 30, 56, 500);
+}
 
+.welcome__caption {
+  @include fonts($dosis, 36, 56, 700);
+  text-transform: uppercase;
+}
 
-
+.welcome__text {
+  @include fonts($rob, 14, 24, 400);
+}
 
 
 
@@ -33,9 +75,29 @@
 
 
 //features - блок преимуществ
-
-
-
+.features__caption {
+  @include fonts($dosis, 36, 46, 700);
+  color: $main-color;
+  text-transform: uppercase;
+}
+.features__text {
+  @include fonts($rob, 14, 24, 500);
+}
+.features__info-subtitle {
+  @include fonts($rob, 14, 24, 500);
+}
+.features__info-name {
+  @include fonts($rob-sl, 24, 24, 400);
+}
+.features__info-text {
+  @include fonts($rob, 14, 24, 400);
+}
+.features__info-link {
+  @include fonts($rob, 16, 34, 500);
+  color: $main-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 
 
@@ -43,8 +105,22 @@
 
 
 //facilities - блок школьные средства
-
-
+.facilities {
+  background-color: $main-color;
+}
+.facilities__caption {
+  @include fonts($dosis, 36, 46, 700);
+  color: $second-color;
+  text-transform: capitalize;
+}
+.facilities__text {
+  @include fonts($rob, 14, 24, 400);
+  color: $second-color;
+}
+.facilities__item {
+  @include fonts($rob, 16, 24, 500);
+  color: $second-color;
+}
 
 
 
@@ -52,8 +128,24 @@
 
 
 //teachers - блок учителя
-
-
+.teachers__caption {
+  @include fonts($dosis, 36, 46, 700);
+  color: $main-color;
+  text-transform: capitalize;
+}
+.teachers__text {
+  @include fonts($rob, 14, 24, 500);
+}
+.teachers__info {
+  color: $second-color;
+  background-color: $main-color;
+}
+.teachers__name {
+  @include fonts($dosis, 26, 36, 700);
+}
+.teachers__lesson {
+  @include fonts($dosis, 14, 26, 500);
+}
 
 
 
@@ -61,7 +153,16 @@
 
 
 //reviews-slider  -  слайдер с отзывами
-
+.reviews-slider {
+  color: $second-color;
+  background-color: $main-color;
+}
+.reviews-slider__person-name {
+  @include fonts($dosis, 36, 46, 700);
+}
+.reviews-slider__text {
+  @include fonts($rob, 18, 28, 400);
+}
 
 
 
@@ -70,7 +171,11 @@
 
 
 //notice - блок объявлений
-
+.notice__caption {
+  @include fonts($dosis, 36, 46, 700);
+  color: $main-color;
+  text-transform: capitalize;
+}
 
 
 
@@ -90,3 +195,6 @@
 
 
 //footer - блок подвал
+.footer {
+//  background-color: $main-color;
+}
