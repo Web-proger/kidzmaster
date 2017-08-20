@@ -61,3 +61,11 @@
   src: url('../fonts/RobotoSlab-Regular.woff') format('woff'),
   url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

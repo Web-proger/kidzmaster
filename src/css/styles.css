@@ -483,12 +483,6 @@ template {
   display: none;
 }
 
-/*
-font-family: "Roboto", "Arial", sans-serif;
-font-family: "Roboto Slab", "Georgia", serif;
-font-family: "Dosis", "Arial", sans-serif;
-*/
-
 ul {
   list-style: none;
   margin: 0;
@@ -509,22 +503,36 @@ img {
   font-weight: 500;
   color: #00a4d3;
   background-color: #ffffff;
+  outline: none;
   border-radius: 10px;
   text-transform: uppercase;
 }
 
-.btn--inver {
+.btn--invert {
   color: #ffffff;
   background-color: #00a4d3;
 }
 
 .header {
+  background-color: #00a4d3;
+}
+
+.menu {
   font-family: "Dosis", "Arial", sans-serif;
   font-size: 14px;
   line-height: 25px;
   font-weight: 400;
-  background-color: #00a4d3;
   color: #ffffff;
+}
+
+.menu__link {
+  color: #ffffff;
+}
+
+.menu__item-link {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .welcome {
@@ -683,6 +691,21 @@ img {
   font-weight: 400;
 }
 
+.notice__date {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #212121;
+}
+
+.notice__text {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
 .notice__caption {
   font-family: "Dosis", "Arial", sans-serif;
   font-size: 36px;
@@ -690,4 +713,62 @@ img {
   font-weight: 700;
   color: #00a4d3;
   text-transform: capitalize;
+}
+
+.notice__section-link {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #00a4d3;
+  text-decoration: none;
+}
+
+.other {
+  background-color: #f5f5f5;
+}
+
+.other__caption {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #00a4d3;
+  text-transform: capitalize;
+}
+
+.other__description {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.footer__input-subscribe {
+  border: 1px solid #00a4d3;
+}
+
+.footer__sign-in-link {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.footer__instagram-item {
+  width: 99px;
+  height: 99px;
+  background-color: #00a4d3;
+}
+
+.footer__copyright {
+  font-family: "Roboto Slab", "Georgia", serif;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #00a4d3;
+}
+
+.footer__social-link {
+  font-family: 'FontAwesome';
 }

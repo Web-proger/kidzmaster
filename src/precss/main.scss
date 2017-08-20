@@ -1,8 +1,3 @@
-/*
-font-family: "Roboto", "Arial", sans-serif;
-font-family: "Roboto Slab", "Georgia", serif;
-font-family: "Dosis", "Arial", sans-serif;
-*/
 
 // Общие стили
 ul {
@@ -21,9 +16,10 @@ img {
   @include fonts($rob, 16, 34, 500);
   color: $main-color;
   background-color: $second-color;
+  outline: none;
   border-radius: 10px;
   text-transform: uppercase;
-  &--inver {
+  &--invert {
     color: $second-color;
     background-color: $main-color;
   }
@@ -31,20 +27,28 @@ img {
 
 //Header - Шапка
 .header {
-  @include fonts($dosis, 14, 25, 400);
   background-color: $main-color;
+}
+
+
+//menu - меню
+.menu {
+  @include fonts($dosis, 14, 25, 400);
   color: $second-color;
+}
+.menu__link {
+  color: $second-color;
+}
+.menu__item-link {
+  color: $second-color;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 
 
 
 //slider - Слайдер
-
-
-
-
-
 
 
 
@@ -67,9 +71,6 @@ img {
 .welcome__text {
   @include fonts($rob, 14, 24, 400);
 }
-
-
-
 
 
 
@@ -102,8 +103,6 @@ img {
 
 
 
-
-
 //facilities - блок школьные средства
 .facilities {
   background-color: $main-color;
@@ -121,9 +120,6 @@ img {
   @include fonts($rob, 16, 24, 500);
   color: $second-color;
 }
-
-
-
 
 
 
@@ -150,8 +146,6 @@ img {
 
 
 
-
-
 //reviews-slider  -  слайдер с отзывами
 .reviews-slider {
   color: $second-color;
@@ -168,33 +162,67 @@ img {
 
 
 
-
-
 //notice - блок объявлений
+.notice__date {
+  @include fonts($rob, 14, 32, 400);
+  color: #212121;
+}
+.notice__text {
+  @include fonts($rob, 16, 26, 400);
+}
 .notice__caption {
   @include fonts($dosis, 36, 46, 700);
   color: $main-color;
   text-transform: capitalize;
 }
-
-
-
-
+.notice__section-link {
+  @include fonts($rob, 16, 34, 500);
+  color: $main-color;
+  text-decoration: none;
+}
 
 
 
 
 //other  -  блок разное
-
-
-
-
-
-
+.other {
+  background-color: #f5f5f5;
+}
+.other__caption {
+  @include fonts($rob, 18, 26, 500);
+  color: $main-color;
+  text-transform: capitalize;
+}
+.other__description {
+  @include fonts($rob, 14, 24, 400);
+}
+.footer__input-subscribe {
+  border: 1px solid $main-color;
+}
 
 
 
 //footer - блок подвал
 .footer {
 //  background-color: $main-color;
+}
+.footer__sign-in-link {
+  @include fonts($rob, 16, 26, 500);
+}
+.footer__subtitle {
+
+}
+
+.footer__instagram-item {
+  width: 99px;
+  height: 99px;
+  background-color: $main-color;
+}
+
+.footer__copyright {
+  @include fonts($rob-sl, 14, 32, 700);
+  color: $main-color;
+}
+.footer__social-link {
+  font-family: 'FontAwesome';
 }
