@@ -157,6 +157,9 @@ img {
 
 
 //features - блок преимуществ
+.features__wrapper {
+  @include wrapper();
+}
 .features__caption {
   @include fonts($dosis, 36, 46, 700);
   color: $main-color;
@@ -164,6 +167,22 @@ img {
 }
 .features__text {
   @include fonts($rob, 14, 24, 500);
+}
+.features__items {
+ @include row-flex()
+  justify-content: center;
+}
+.features__item {
+  display: flex;
+  flex-direction: column;
+  @include col();
+  @include size(3);
+
+  margin: 0;
+  &:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
 }
 .features__info-subtitle {
   @include fonts($rob, 14, 24, 500);
@@ -293,6 +312,9 @@ img {
 
 
 //teachers - блок учителя
+.teachers__wrapper {
+  @include wrapper();
+}
 .teachers__caption {
   @include fonts($dosis, 36, 46, 700);
   color: $main-color;
@@ -301,7 +323,26 @@ img {
 .teachers__text {
   @include fonts($rob, 14, 24, 500);
 }
+.teachers__items {
+@include row-flex();
+  justify-content: center;
+
+}
+.teachers__item {
+  position: relative;
+  @include col();
+  @include size(3);
+  @include size-md(4);
+  @include size-sm(6);
+  @include size-xs(12);
+
+  margin-bottom: 18px;
+}
 .teachers__info {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
   color: $second-color;
   background-color: $main-color;
 }
@@ -320,6 +361,9 @@ img {
   color: $second-color;
   background-color: $main-color;
 }
+.reviews-slider__wrapper {
+  @include wrapper();
+}
 .reviews-slider__person-name {
   @include fonts($dosis, 36, 46, 700);
 }
@@ -332,6 +376,9 @@ img {
 
 
 //notice - блок объявлений
+.notice__wrapper {
+  @include wrapper();
+}
 .notice__date {
   @include fonts($rob, 14, 32, 400);
   color: #212121;
@@ -375,6 +422,9 @@ img {
 .footer {
 //  background-color: $main-color;
 }
+.footer__top {
+  @include wrapper();
+}
 .footer__sign-in-link {
   @include fonts($rob, 16, 26, 500);
 }
@@ -384,6 +434,9 @@ img {
   text-decoration: none;
 }
 
+.footer__middle {
+  @include wrapper();
+}
 .footer__contacts {
   @include fonts($rob, 14, 24, 400);
   text-transform: uppercase;
@@ -411,6 +464,9 @@ img {
   background-color: $main-color;
 }
 
+.footer__bottom {
+  @include wrapper();
+}
 .footer__copyright {
   @include fonts($rob-sl, 14, 32, 700);
   color: $main-color;
