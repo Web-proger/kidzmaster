@@ -1,5 +1,8 @@
 
 // Общие стили
+body {
+  min-width: 320px;
+}
 ul {
   @include ul-style;
 }
@@ -20,6 +23,7 @@ img {
   border: 0;
   border-radius: 10px;
   text-transform: uppercase;
+  text-decoration: none;
   &--invert {
     color: $second-color;
     background-color: $main-color;
@@ -36,15 +40,46 @@ img {
 .header {
   background-color: $main-color;
 }
-
+.header__wrapper {
+  @include wrapper();
+    display: flex;
+}
+.header__logo {
+  margin-right: 82px;
+  min-width: 150px;
+}
 
 //menu - меню
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
   @include fonts($dosis, 14, 25, 400);
   color: $second-color;
 }
+.menu__top {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 323px;
+}
+.menu__user-block {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 234px;
+}
+
 .menu__link {
   color: $second-color;
+  text-decoration: none;
+}
+.menu__items {
+  display: flex;
+  justify-content: space-between;
 }
 .menu__item-link {
   color: $second-color;
@@ -53,12 +88,14 @@ img {
 }
 .menu__search {
   font-size: 0;
+  .fa-search {
+    padding-top: 5px;
+  }
 }
 .menu__top i.fa {
   font-size: 16px;
   margin-right: 9px;
 }
-
 
 
 
@@ -69,10 +106,39 @@ img {
 
 
 
-
 //welcome - блок привествия
 .welcome {
-  background-color: $main-color;
+  padding: 55px 0;
+  background: $main-color url(../img/welcome-layer.jpg) no-repeat top center;
+  background-size: cover;
+  color: $second-color;
+  @media #{$m-xs} {
+    padding-top: 20px;
+  }
+}
+.welcome__wrapper {
+  @include wrapper();
+  background: url(../img/welcome-kids.png) no-repeat top right 20px;
+  background-size: 50%;
+  @media #{$m-md} {
+    background-size: 60%;
+  }
+  @media #{$m-sm} {
+    background-size: 35%;
+  }
+  @media #{$m-xs} {
+    background-position: top center;
+  }
+}
+.welcome__block {
+  @include size(5);
+  @include size-sm(10);
+  @media #{$m-sm} {
+    margin: 0 auto;
+  }
+  @media #{$m-xs} {
+    padding-top: 100px;
+}
 }
 .welcome__subtitle {
   @include fonts($dosis, 30, 56, 500);
@@ -133,7 +199,28 @@ img {
 
 //facilities - блок школьные средства
 .facilities {
-  background-color: $main-color;
+  padding: 55px 0;
+  background: $main-color url("../img/facilities-layer.jpg") top center;
+  background-size: contain;
+}
+.facilities__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include wrapper();
+  @media #{$m-sm} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.facilities__info {
+  max-width: 488px;
+  @media #{$m-md} {
+    max-width: 320px;
+  }
+  @media #{$m-sm} {
+    max-width: 400px;
+  }
 }
 .facilities__caption {
   @include fonts($dosis, 36, 46, 700);
@@ -144,11 +231,65 @@ img {
   @include fonts($rob, 14, 24, 400);
   color: $second-color;
 }
+.facilities__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include size(6.6);
+  @media #{$m-md} {
+    width: 500px;
+  }
+}
 .facilities__item {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  box-sizing: border-box;
+  margin: 18px 12px;
+  padding-top: 100px;
   @include fonts($rob, 16, 24, 500);
-  color: $second-color;
+  color: $main-color;
+  background-color: $second-color;
+  border-radius: 20px;
+  text-align: center;
+  @media screen and (max-width: 400px) {
+    width: 250px;
+    height: 250px;
+    padding-top: 140px;
+  }
 }
 
+.facilities__item {
+  &::before {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 55px;
+    bottom: 70px;
+    left: calc(50% - 24px);
+    @media screen and (max-width: 400px) {
+      bottom: 110px;
+    }
+  }
+  &--health::before{
+    background: url("../img/healthy_meals.png") no-repeat;
+  }
+  &--multimedia::before {
+    background: url("../img/multimedia.png") no-repeat;
+  }
+  &--art::before {
+    background: url("../img/art.png") no-repeat;
+  }
+  &--events::before {
+    background: url("../img/events.png") no-repeat;
+  }
+  &--teachers::before {
+    background: url("../img/teachers.png") no-repeat;
+  }
+  &--acivement::before {
+    background: url("../img/achievements.png") no-repeat;
+  }
+}
 
 
 //teachers - блок учителя

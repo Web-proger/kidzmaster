@@ -5,6 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/font-awesome.css">
   <title>Document</title>
@@ -17,8 +18,7 @@
       </div>
       <div class="header__menu menu">
         <div class="menu__top">
-          <div class="menu__contacts">
-            <ul class="menu__list">
+            <ul class="menu__contacts">
               <li class="menu__phone">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 1-800-633-3469
@@ -28,9 +28,7 @@
                 maledukado.com
               </li>
             </ul>
-          </div>
-          <div class="menu__user-block">
-            <ul class="menu__list">
+            <ul class="menu__user-block">
               <li class="menu__search">
                 <a href="" class="menu__link">
                   <i class="fa fa-search" aria-hidden="true"></i>
@@ -50,7 +48,6 @@
                 </a>
               </li>
             </ul>
-          </div>
         </div>
         <div class="menu__bottom">
           <ul class="menu__items">
@@ -93,16 +90,15 @@
     </section>
     <section class="welcome">
       <div class="welcome__wrapper">
-        <div class="welcome__subtitle">Welcome to</div>
-        <h2 class="welcome__caption">Kidz master</h2>
-        <div class="welcome__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aspernatur, atque consequatur cumque cupiditate dolore dolores fuga in ipsa libero nobis nostrum obcaecati reprehenderit rerum tempora ullam, voluptatem? Cum laboriosam quia quis? Animi corporis enim eos eveniet expedita facilis itaque, iure maiores necessitatibus quae quam quod sit sunt unde.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta distinctio placeat praesentium quaerat quasi tenetur.</p>
+        <div class="welcome__block">
+          <div class="welcome__subtitle">Welcome to</div>
+          <h2 class="welcome__caption">Kidz master</h2>
+          <div class="welcome__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aspernatur, atque consequatur cumque cupiditate dolore dolores fuga in ipsa libero nobis nostrum obcaecati reprehenderit rerum tempora ullam, voluptatem? Cum laboriosam quia quis? Animi corporis enim eos eveniet expedita facilis itaque, iure maiores necessitatibus quae quam quod sit sunt unde.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta distinctio placeat praesentium quaerat quasi tenetur.</p>
+          </div>
+          <a href="#" class="btn welcome__btn">Read more</a>
         </div>
-        <a href="#" class="btn welcome__btn">Read more</a>
-      </div>
-      <div class="welcome__img-block">
-        <img class="welcome__img" src="img/welcome-kids.png" alt="" width="626" height="458">
       </div>
     </section>
     <section class="features">
@@ -167,21 +163,24 @@
       </div>
     </section>
     <section class="facilities">
-      <div class="facilities__info">
-        <div class="facilities__img-block">
-          <img class="facilities__img" src="img/facilities-child.png" alt="" width="416" height="363">
-        </div>
+      <div class="facilities__wrapper">
+        <div class="facilities__info">
+          <div class="facilities__img-block">
+            <img class="facilities__img" src="img/facilities-child.png" alt="" width="416" height="363">
+          </div>
           <h2 class="facilities__caption">School Facilities</h2>
           <div class="facilities__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur, cumque deleniti doloremque dolores ducimus exercitationem, fugit id impedit non obcaecati optio quaerat quas ratione saepe sequi voluptates!</div>
         </div>
         <div class="facilities__items">
-          <div class="facilities__item">Healthy Meals</div>
-          <div class="facilities__item">Multimedia Class</div>
-          <div class="facilities__item">Art Class</div>
-          <div class="facilities__item">Events</div>
-          <div class="facilities__item">Teachers</div>
-          <div class="facilities__item">Achivements</div>
+          <div class="facilities__item facilities__item--health">Healthy Meals</div>
+          <div class="facilities__item facilities__item--multimedia">Multimedia Class</div>
+          <div class="facilities__item facilities__item--art">Art Class</div>
+          <div class="facilities__item facilities__item--events">Events</div>
+          <div class="facilities__item facilities__item--teachers">Teachers</div>
+          <div class="facilities__item facilities__item--acivement">Achivements</div>
         </div>
+      </div>
+
     </section>
     <section class="teachers">
       <div class="teachers__wrapper">

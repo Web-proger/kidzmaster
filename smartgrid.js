@@ -5,7 +5,7 @@ const settings = {
     columns: 12,
     offset: '30px',
     container: {
-        maxWidth: '1170px',
+        maxWidth: '1140px',
         fields: '30px'
     },
     breakPoints: {
@@ -18,11 +18,7 @@ const settings = {
             fields: "10px"
         },
         xs: {
-            width: "576px",
-            fields: "5px"
-        },
-        xxs: {
-            width: "380px",
+            width: "480px",
             fields: "5px"
         }
     },
