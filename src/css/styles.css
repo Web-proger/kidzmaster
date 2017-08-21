@@ -504,6 +504,7 @@ img {
   color: #00a4d3;
   background-color: #ffffff;
   outline: none;
+  border: 0;
   border-radius: 10px;
   text-transform: uppercase;
 }
@@ -511,6 +512,10 @@ img {
 .btn--invert {
   color: #ffffff;
   background-color: #00a4d3;
+}
+
+.btn--no-brad {
+  border-radius: 0;
 }
 
 .header {
@@ -533,6 +538,15 @@ img {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.menu__search {
+  font-size: 0;
+}
+
+.menu__top i.fa {
+  font-size: 16px;
+  margin-right: 9px;
 }
 
 .welcome {
@@ -584,6 +598,11 @@ img {
   font-weight: 500;
 }
 
+.features__info-subtitle i.fa-folder-open {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
 .features__info-name {
   font-family: "Roboto Slab", "Georgia", serif;
   font-size: 24px;
@@ -606,6 +625,18 @@ img {
   color: #00a4d3;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.footer__social {
+  font-size: 0;
+}
+
+.footer__social i.fa {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #00a4d3;
+  text-transform: uppercase;
 }
 
 .facilities {
@@ -755,6 +786,49 @@ img {
   font-weight: 500;
 }
 
+.footer__subtitle {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__contacts {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.footer__address-block span {
+  font-size: 18px;
+}
+
+.footer__contacts-subtitle {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #00a4d3;
+}
+
+.footer__contacts sup {
+  font-weight: 300;
+}
+
+.footer__link {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
 .footer__instagram-item {
   width: 99px;
   height: 99px;
@@ -767,8 +841,10 @@ img {
   line-height: 32px;
   font-weight: 700;
   color: #00a4d3;
+  text-transform: uppercase;
 }
 
 .footer__social-link {
-  font-family: 'FontAwesome';
+  position: relative;
+  text-decoration: none;
 }
