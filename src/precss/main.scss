@@ -132,9 +132,10 @@ img {
 }
 .welcome__block {
   @include size(5);
-  @include size-sm(10);
+  @include size-sm(12);
   @media #{$m-sm} {
     margin: 0 auto;
+    width: 100%;
   }
   @media #{$m-xs} {
     padding-top: 100px;
@@ -157,6 +158,10 @@ img {
 
 
 //features - блок преимуществ
+.features {
+  padding-top: 57px;
+  padding-bottom: 50px;
+}
 .features__wrapper {
   @include wrapper();
 }
@@ -169,20 +174,48 @@ img {
   @include fonts($rob, 14, 24, 500);
 }
 .features__items {
- @include row-flex()
+ @include row-flex();
   justify-content: center;
+  @media #{$m-md} {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  @media #{$m-sm} {
+    margin: 0;
+  }
 }
 .features__item {
   display: flex;
   flex-direction: column;
-  @include col();
-  @include size(3);
-
   margin: 0;
+  margin-bottom: 45px;
   &:nth-child(even) {
     flex-direction: column-reverse;
   }
-
+  &:nth-child(even) .features__info {
+    border-radius: 25px 25px 0 0;
+  }
+}
+.fearures__img-container {
+  width: 283px;
+  height: 334px;
+ @media screen and (max-width: 1180px) and (min-width: 993px)  {
+    width: 230px;
+    height: 262px;
+  }
+}
+.features__info {
+  width: 283px;
+  height: 334px;
+  box-sizing: border-box;
+  padding: 36px;
+  background-color: #fafafa;
+  border-radius: 0 0 25px 25px;
+  @media screen and (max-width: 1180px) and (min-width: 993px)  {
+    width: 230px;
+    height: 262px;
+    padding: 25px;
+  }
 }
 .features__info-subtitle {
   @include fonts($rob, 14, 24, 500);
@@ -203,18 +236,9 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
-.footer__social {
-  font-size: 0;
-  i.fa {
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 32px;
-    color: $main-color;
-    text-transform: uppercase;
-  }
+.features__btn {
+  text-align: center;
 }
-
-
 
 //facilities - блок школьные средства
 .facilities {
@@ -254,7 +278,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  @include size(6.6);
+  max-width: 556px;
   @media #{$m-md} {
     width: 500px;
   }
@@ -376,8 +400,29 @@ img {
 
 
 //notice - блок объявлений
+.notice {
+  padding-top: 60px;
+  padding-bottom: 25px;
+}
 .notice__wrapper {
   @include wrapper();
+}
+.notice__section {
+  margin-bottom: 20px;
+}
+.notice__items {
+  @include row-flex();
+  justify-content: center;
+}
+.notice__item {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-xs(10);
+  margin-bottom: 25px;
+}
+.notice__img {
+  border-radius: 20px;
 }
 .notice__date {
   @include fonts($rob, 14, 32, 400);
@@ -402,7 +447,23 @@ img {
 
 //other  -  блок разное
 .other {
+/*  display: flex;
+  flex-wrap: wrap;*/
+  justify-content: space-around;
+  @include row-flex();
+  padding-top: 45px;
+  padding-bottom: 20px;
   background-color: #f5f5f5;
+}
+.other__item {
+//  flex-basis: 190px;
+  @include col();
+  @include size(3);
+  @include size-sm(6);
+  position: relative;
+  padding-top: 70px;
+  margin-bottom: 25px;
+  outline: 1px solid red;
 }
 .other__caption {
   @include fonts($rob, 18, 26, 500);
@@ -475,4 +536,14 @@ img {
 .footer__social-link {
   position: relative;
   text-decoration: none;
+}
+.footer__social {
+  font-size: 0;
+  i.fa {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 32px;
+    color: $main-color;
+    text-transform: uppercase;
+  }
 }

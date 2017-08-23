@@ -155,6 +155,11 @@ img {
   font-weight: 400;
 }
 
+.features {
+  padding-top: 57px;
+  padding-bottom: 50px;
+}
+
 .features__wrapper {
   max-width: 1140px;
   padding-left: 30px;
@@ -189,16 +194,30 @@ img {
 .features__item {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  word-wrap: break-word;
-  width: calc(25% - 30px);
   margin: 0;
+  margin-bottom: 45px;
 }
 
 .features__item:nth-child(even) {
   flex-direction: column-reverse;
+}
+
+.features__item:nth-child(even) .features__info {
+  border-radius: 25px 25px 0 0;
+}
+
+.fearures__img-container {
+  width: 283px;
+  height: 334px;
+}
+
+.features__info {
+  width: 283px;
+  height: 334px;
+  box-sizing: border-box;
+  padding: 36px;
+  background-color: #fafafa;
+  border-radius: 0 0 25px 25px;
 }
 
 .features__info-subtitle {
@@ -237,16 +256,8 @@ img {
   text-decoration: none;
 }
 
-.footer__social {
-  font-size: 0;
-}
-
-.footer__social i.fa {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 32px;
-  color: #00a4d3;
-  text-transform: uppercase;
+.features__btn {
+  text-align: center;
 }
 
 .facilities {
@@ -290,7 +301,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: calc(55% - 30px);
+  max-width: 556px;
 }
 
 .facilities__item {
@@ -433,11 +444,41 @@ img {
   font-weight: 400;
 }
 
+.notice {
+  padding-top: 60px;
+  padding-bottom: 25px;
+}
+
 .notice__wrapper {
   max-width: 1140px;
   padding-left: 30px;
   padding-right: 30px;
   margin: 0 auto;
+}
+
+.notice__section {
+  margin-bottom: 20px;
+}
+
+.notice__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: center;
+}
+
+.notice__item {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(33.33333% - 30px);
+  margin-bottom: 25px;
+}
+
+.notice__img {
+  border-radius: 20px;
 }
 
 .notice__date {
@@ -474,7 +515,28 @@ img {
 }
 
 .other {
+  /*  display: flex;
+  flex-wrap: wrap;*/
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 45px;
+  padding-bottom: 20px;
   background-color: #f5f5f5;
+}
+
+.other__item {
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(25% - 30px);
+  position: relative;
+  padding-top: 70px;
+  margin-bottom: 25px;
+  outline: 1px solid red;
 }
 
 .other__caption {
@@ -588,6 +650,18 @@ img {
   text-decoration: none;
 }
 
+.footer__social {
+  font-size: 0;
+}
+
+.footer__social i.fa {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #00a4d3;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 992px) {
   .header__wrapper {
     padding-left: 20px;
@@ -606,6 +680,11 @@ img {
   .features__wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .features__items {
+    margin-left: 48px;
+    margin-right: 48px;
   }
 
   .facilities__wrapper {
@@ -640,6 +719,10 @@ img {
     padding-right: 20px;
   }
 
+  .notice__item {
+    width: calc(50% - 30px);
+  }
+
   .footer__top {
     padding-left: 20px;
     padding-right: 20px;
@@ -672,16 +755,21 @@ img {
   }
 
   .welcome__block {
-    width: calc(83.33333% - 30px);
+    width: calc(100% - 30px);
   }
 
   .welcome__block {
     margin: 0 auto;
+    width: 100%;
   }
 
   .features__wrapper {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .features__items {
+    margin: 0;
   }
 
   .facilities__wrapper {
@@ -715,6 +803,10 @@ img {
   .notice__wrapper {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .other__item {
+    width: calc(50% - 30px);
   }
 
   .footer__top {
@@ -785,6 +877,10 @@ img {
     padding-right: 5px;
   }
 
+  .notice__item {
+    width: calc(83.33333% - 30px);
+  }
+
   .footer__top {
     padding-left: 5px;
     padding-right: 5px;
@@ -810,5 +906,18 @@ img {
 
   .facilities__item::before {
     bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 1180px) and (min-width: 993px) {
+  .fearures__img-container {
+    width: 230px;
+    height: 262px;
+  }
+
+  .features__info {
+    width: 230px;
+    height: 262px;
+    padding: 25px;
   }
 }
