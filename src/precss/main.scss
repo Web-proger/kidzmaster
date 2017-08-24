@@ -48,6 +48,9 @@ img {
   margin-right: 82px;
   min-width: 150px;
 }
+.menu__contacts {
+  margin-right: 20px;
+}
 
 //menu - меню
 .menu {
@@ -61,16 +64,27 @@ img {
 .menu__top {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 920px) {
+    flex-direction: column;
+  }
 }
 .menu__contacts {
   display: flex;
   justify-content: space-between;
   flex-basis: 323px;
+  @media screen and (max-width: 920px) {
+    flex-basis: 50px;
+    justify-content: space-around;
+  }
 }
 .menu__user-block {
   display: flex;
   justify-content: space-between;
   flex-basis: 234px;
+  @media screen and (max-width: 920px) {
+    flex-basis: 50px;
+    justify-content: space-around;
+  }
 }
 
 .menu__link {
@@ -101,8 +115,6 @@ img {
 
 
 //slider - Слайдер
-
-
 
 
 
@@ -528,10 +540,13 @@ img {
                 url("../img/rainbow.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: bottom center, bottom center, top 22px right 35px;
+  background-size: contain, auto 90%, auto;
+  @media screen and (max-width: 1100px) {
+    padding-bottom: 120px;
+  }
   a {
     text-decoration: none;
   }
-  background-size: contain, auto 90%, auto;
 }
 .footer__top {
   @include wrapper();
@@ -540,6 +555,15 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 150px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+}
+.footer__sign-in {
+  @media screen and (max-width: 900px) {
+    margin-bottom: 30px;
+  }
 }
 .footer__sign-in-link {
   @include fonts($rob, 16, 26, 500);
@@ -563,14 +587,17 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  @media screen and (max-width: 900px) {
+    justify-content: space-around;
+  }
 }
 .footer__contacts {
+  margin-right: 40px;
   @include fonts($rob, 14, 24, 400);
   text-transform: uppercase;
 }
 .footer__address-block {
   margin-bottom: 20px;
-  margin-right: 30px;
   span {
     font-size: 18px;
   }
@@ -587,6 +614,9 @@ img {
 }
 .footer__quicklinks {
   margin-right: 30px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 50px;
+  }
 }
 .footer__link {
   display: block;
@@ -618,11 +648,21 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 35px;
+  @media screen and (max-width: 1100px) {
+    justify-content: center;
+  }
 }
 .footer__logo {
   margin-top: -33px;
+  @media screen and (max-width: 1100px) {
+    order: 1;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
 }
 .footer__copyright {
+  margin-right: 30px;
   @include fonts($rob-sl, 14, 32, 700);
   color: $main-color;
   text-transform: uppercase;
@@ -633,6 +673,10 @@ img {
   margin-left: 13px;
   margin-right: 13px;
   text-decoration: none;
+  @media screen and (max-width: 810px) {
+    order: -1;
+    margin-bottom: 20px;
+  }
 }
 .footer__social {
   width: 315px;
