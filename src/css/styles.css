@@ -55,10 +55,6 @@ img {
   min-width: 150px;
 }
 
-.menu__contacts {
-  margin-right: 20px;
-}
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -69,6 +65,10 @@ img {
   line-height: 25px;
   font-weight: 400;
   color: #ffffff;
+}
+
+.menu li {
+  padding: 7px;
 }
 
 .menu__top {
@@ -628,6 +628,8 @@ img {
   font-size: 16px;
   line-height: 26px;
   font-weight: 500;
+  color: #00a4d3;
+  text-transform: uppercase;
 }
 
 .footer__subtitle {
@@ -692,7 +694,7 @@ img {
 }
 
 .footer__quicklinks {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .footer__link {
@@ -794,6 +796,11 @@ img {
     padding-right: 20px;
   }
 
+  .header__logo {
+    width: 33%;
+    margin-right: 5%;
+  }
+
   .welcome__wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -867,12 +874,12 @@ img {
   }
 
   .menu__contacts {
-    flex-basis: 50px;
+    flex-basis: 35px;
     justify-content: space-around;
   }
 
   .menu__user-block {
-    flex-basis: 50px;
+    flex-basis: 35px;
     justify-content: space-around;
   }
 }
@@ -908,6 +915,21 @@ img {
 }
 
 @media screen and (max-width: 810px) {
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer__copyright {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   .footer__social-link {
     order: -1;
     margin-bottom: 20px;
@@ -918,6 +940,14 @@ img {
   .header__wrapper {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .header__wrapper {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    align-self: center;
   }
 
   .welcome__wrapper {
@@ -1003,6 +1033,14 @@ img {
     padding-right: 5px;
   }
 
+  .menu__items .menu__item {
+    padding: 7px 22px;
+  }
+
+  .menu__items {
+    flex-wrap: wrap;
+  }
+
   .welcome {
     padding-top: 20px;
   }
@@ -1059,9 +1097,42 @@ img {
     padding-right: 5px;
   }
 
+  .footer__contacts {
+    margin: 30px;
+    margin-top: 0;
+  }
+
+  .footer__quicklinks {
+    margin: 40px;
+    margin-top: 0;
+  }
+
   .footer__bottom {
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  .footer__copyright {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footer {
+    padding-bottom: 60px;
+  }
+
+  .footer__instagram {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__instagram-item {
+    margin: 20px;
+  }
+
+  .footer__logo {
+    width: 180px;
   }
 }
 
@@ -1074,6 +1145,14 @@ img {
 
   .facilities__item::before {
     bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .menu__items {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
   }
 }
 

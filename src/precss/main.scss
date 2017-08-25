@@ -43,13 +43,21 @@ img {
 .header__wrapper {
   @include wrapper();
     display: flex;
+  @media #{$m-sm} {
+    flex-direction: column;
+  }
 }
 .header__logo {
   margin-right: 82px;
   min-width: 150px;
-}
-.menu__contacts {
-  margin-right: 20px;
+  @media #{$m-md} {
+    width: 33%;
+    margin-right: 5%;
+  }
+  @media #{$m-sm} {
+    align-self: center;
+  }
+
 }
 
 //menu - меню
@@ -60,6 +68,14 @@ img {
   flex-grow: 1;
   @include fonts($dosis, 14, 25, 400);
   color: $second-color;
+}
+.menu li {
+  padding: 7px;
+}
+.menu__items .menu__item {
+  @media #{$m-xs} {
+  padding: 7px 22px;
+  }
 }
 .menu__top {
   display: flex;
@@ -73,7 +89,7 @@ img {
   justify-content: space-between;
   flex-basis: 323px;
   @media screen and (max-width: 920px) {
-    flex-basis: 50px;
+    flex-basis: 35px;
     justify-content: space-around;
   }
 }
@@ -82,7 +98,7 @@ img {
   justify-content: space-between;
   flex-basis: 234px;
   @media screen and (max-width: 920px) {
-    flex-basis: 50px;
+    flex-basis: 35px;
     justify-content: space-around;
   }
 }
@@ -94,6 +110,14 @@ img {
 .menu__items {
   display: flex;
   justify-content: space-between;
+  @media #{$m_xs} {
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 395px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
 }
 .menu__item-link {
   color: $second-color;
@@ -393,7 +417,6 @@ img {
 
 
 
-
 //reviews-slider  -  слайдер с отзывами
 .reviews-slider {
   color: $second-color;
@@ -408,8 +431,6 @@ img {
 .reviews-slider__text {
   @include fonts($rob, 18, 28, 400);
 }
-
-
 
 
 
@@ -544,9 +565,10 @@ img {
   @media screen and (max-width: 1100px) {
     padding-bottom: 120px;
   }
-  a {
-    text-decoration: none;
+  @media screen and (max-width: 430px) {
+    padding-bottom: 60px;
   }
+  a { text-decoration: none; }
 }
 .footer__top {
   @include wrapper();
@@ -567,6 +589,8 @@ img {
 }
 .footer__sign-in-link {
   @include fonts($rob, 16, 26, 500);
+  color: $main-color;
+  text-transform: uppercase;
 }
 .footer__subtitle {
   margin: 0;
@@ -595,6 +619,10 @@ img {
   margin-right: 40px;
   @include fonts($rob, 14, 24, 400);
   text-transform: uppercase;
+  @media #{$m_xs} {
+    margin: 30px;
+    margin-top: 0;
+  }
 }
 .footer__address-block {
   margin-bottom: 20px;
@@ -613,9 +641,13 @@ img {
     font-weight: 300;
 }
 .footer__quicklinks {
-  margin-right: 30px;
+  margin-right: 20px;
   @media screen and (max-width: 900px) {
     margin-bottom: 50px;
+  }
+  @media #{$m_xs} {
+    margin: 40px;
+    margin-top: 0;
   }
 }
 .footer__link {
@@ -629,6 +661,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media screen and (max-width: 430px) {
+    align-items: center;
+    text-align: center;
+  }
 }
 .footer__instagram-items {
   margin-top: auto;
@@ -639,6 +675,9 @@ img {
   height: 99px;
   background-color: $main-color;
   border-radius: 25px;
+  @media screen and (max-width: 430px) {
+    margin: 20px;
+  }
 }
 
 .footer__bottom {
@@ -651,6 +690,10 @@ img {
   @media screen and (max-width: 1100px) {
     justify-content: center;
   }
+  @media screen and (max-width: 810px) {
+    flex-direction: column;
+    align-items: center;
+}
 }
 .footer__logo {
   margin-top: -33px;
@@ -660,12 +703,26 @@ img {
     margin-right: 50px;
     margin-left: 50px;
   }
+  @media screen and (max-width: 810px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @media screen and (max-width: 430px) {
+    width: 180px;
+  }
 }
 .footer__copyright {
   margin-right: 30px;
   @include fonts($rob-sl, 14, 32, 700);
   color: $main-color;
   text-transform: uppercase;
+  @media screen and (max-width: 810px) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  @media #{$m_xs} {
+    text-align: center;
+  }
 }
 .footer__social-link {
   position: relative;
