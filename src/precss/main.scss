@@ -2,6 +2,7 @@
 // Общие стили
 body {
   min-width: 320px;
+  overflow-x: hidden;
 }
 ul {
   @include ul-style;
@@ -134,9 +135,6 @@ img {
   font-size: 16px;
   margin-right: 9px;
 }
-
-
-
 
 //slider - Слайдер
 
@@ -419,19 +417,64 @@ img {
 
 //reviews-slider  -  слайдер с отзывами
 .reviews-slider {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  padding-left: 98px;
+  padding-right: 98px;
   color: $second-color;
-  background-color: $main-color;
+  background: $main-color url("../img/slider_review-layer.png") no-repeat bottom center;
+  background-size: contain;
+  @media #{$m-sm} {
+    padding-left: 68px;
+    padding-right: 68px;
+  }
+  @media #{$m-xs} {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
 }
 .reviews-slider__wrapper {
   @include wrapper();
+}
+.reviews-slider__form {
+  text-align: center;
+}
+.reviews-slider__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews-slider__img-block {
+  padding: 67px 97px;
+  background: url("../img/frame.png") no-repeat top center;
+  background-size: contain;
+  @media screen and (max-width: 600px) {
+    padding: 18.4% 23.1%;
+  }
 }
 .reviews-slider__person-name {
   @include fonts($dosis, 36, 46, 700);
 }
 .reviews-slider__text {
   @include fonts($rob, 18, 28, 400);
+  margin-bottom: 50px;
 }
-
+.reviews-slider__label {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 3px solid $second-color;
+  border-radius: 9px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.reviews-slider__input {
+  display: none;
+  &:checked + label {
+    background-color: $second-color;
+  }
+}
 
 
 //notice - блок объявлений
@@ -487,8 +530,6 @@ img {
 
 //other  -  блок разное
 .other {
-  justify-content: space-around;
-  @include row-flex();
   padding-top: 45px;
   padding-bottom: 20px;
   background-color: #f5f5f5;
@@ -496,7 +537,16 @@ img {
     justify-content: center;
   }
 }
+.other__wrapper {
+  @include wrapper();
+  max-width: 97%;
+}
+.other__items {
+  @include row-flex();
+  justify-content: space-around;
+}
 .other__item {
+  @include col();
   position: relative;
   flex-basis: 210px;
   padding-top: 85px;
@@ -522,9 +572,9 @@ img {
   &--ico-book {
     background: url("../img/ico-book.png") no-repeat;
   }
-  @media screen and (max-width: 870px) {
-  margin-left: 50px;
-  margin-right: 50px;
+  @media screen and (max-width: 1010px) {
+  margin-left: 60px;
+  margin-right: 60px;
   }
   @media #{$m-sm} {
     margin-right: 20px;
@@ -570,8 +620,10 @@ img {
   }
   a { text-decoration: none; }
 }
-.footer__top {
+.footer__wrapper {
   @include wrapper();
+}
+.footer__top {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -605,7 +657,6 @@ img {
 }
 
 .footer__middle {
-  @include wrapper();
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -681,7 +732,6 @@ img {
 }
 
 .footer__bottom {
-  @include wrapper();
   width: 100%;
   display: flex;
   justify-content: space-between;

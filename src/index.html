@@ -257,17 +257,19 @@
           <div class="reviews-slider__person-name">Michel John</div>
           <div class="reviews-slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, blanditiis deleniti expedita illum impedit ipsa ipsam ipsum iure maxime modi nam nulla praesentium provident quod ratione similique, veniam?</div>
         </div>
-        <form action="" class="reviews-slider__form">
-          <input type="radio" class="reviews-slider" name="reviews-switch">
-          <input type="radio" class="reviews-slider" name="reviews-switch" checked>
-          <input type="radio" class="reviews-slider" name="reviews-switch">
+        <form class="reviews-slider__form" action="">
+          <input class="reviews-slider__input" id="slide1" type="radio" name="reviews-switch">
+          <label class="reviews-slider__label" for="slide1"></label>
+          <input class="reviews-slider__input" id="slide2" type="radio" name="reviews-switch" checked>
+          <label class="reviews-slider__label" for="slide2"></label>
+          <input class="reviews-slider__input" id="slide3" type="radio" name="reviews-switch">
+          <label class="reviews-slider__label" for="slide3"></label>
         </form>
       </div>
     </section>
     <section class="notice">
       <div class="notice__wrapper">
         <h2 class="notice__caption">From Notice Board</h2>
-        <div class="notice__wrapper">
           <div class="notice__section">
             <a href="#" class="notice__section-link notice__section-link--active">Latest News</a>
             <a href="#" class="notice__section-link">Bulletin</a>
@@ -296,95 +298,102 @@
               <div class="notice__text">A Diploma of Accounting is specifically designed for those individual</div>
             </div>
           </div>
-        </div>
       </div>
     </section>
     <section class="other">
-      <div class="other__item other__item--ico-house">
-        <a class="other__caption" href="#">Kidz master address</a>
-        <p class="other__description ">73724 route, 4a <br> south richmond hill, NY 11419</p>
+      <div class="other__wrapper">
+        <div class="other__items">
+          <div class="other__item other__item--ico-house">
+            <a class="other__caption" href="#">Kidz master address</a>
+            <p class="other__description ">73724 route, 4a <br> south richmond hill, NY 11419</p>
+          </div>
+          <div class="other__item other__item--ico-notice">
+            <a class="other__caption" href="#">Notice board ></a>
+            <p class="other__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="other__item other__item--ico-clock">
+            <a class="other__caption" href="#">Office hour</a>
+            <p class="other__description">Monday-Friday <br> 9:00am-5:00pm</p>
+          </div>
+          <div class="other__item other__item--ico-book">
+            <a class="other__caption" href="#">Admission Now ></a>
+            <p class="other__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
       </div>
-      <div class="other__item other__item--ico-notice">
-        <a class="other__caption" href="#">Notice board ></a>
-        <p class="other__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-      <div class="other__item other__item--ico-clock">
-        <a class="other__caption" href="#">Office hour</a>
-        <p class="other__description">Monday-Friday <br> 9:00am-5:00pm</p>
-      </div>
-      <div class="other__item other__item--ico-book">
-        <a class="other__caption" href="#">Admission Now ></a>
-        <p class="other__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
+
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__sign-in">
-        <a class="footer__sign-in-link" href="#">
-          <span>Sign in</span><br>
-          <span>for our newssletter</span>
-        </a>
-      </div>
-      <form action="#" class="footer__form-subscribe">
-        <input class="footer__input-subscribe" type="email" placeholder="Enter your email">
-        <button class="btn btn--invert btn--no-brad footer__button-subscribe">Submit now</button>
-      </form>
-    </div>
-    <div class="footer__middle">
-      <div class="footer__contacts">
-        <div class="footer__address-block">
-          <h3 href="#" class="footer__subtitle">Address:</h3>
-          <span>73424</span> route, <span>4a</span><br>
-          south richmond hill, ny <span>11419</span>
+    <div class="footer__wrapper">
+      <div class="footer__top">
+        <div class="footer__sign-in">
+          <a class="footer__sign-in-link" href="#">
+            <span>Sign in</span><br>
+            <span>for our newssletter</span>
+          </a>
         </div>
-        <div class="footer__contacts-block">
-          <p><span class="footer__contacts-subtitle">Tel:</span> (<sup>603</sup>)<sup>_677_3400</sup></p>
-          <p><span class="footer__contacts-subtitle">Email:</span> info@yourdomain.com</p>
-          <p><span class="footer__contacts-subtitle">Web:</span> yourdomain.com</p>
+        <form action="#" class="footer__form-subscribe">
+          <input class="footer__input-subscribe" type="email" placeholder="Enter your email">
+          <button class="btn btn--invert btn--no-brad footer__button-subscribe">Submit now</button>
+        </form>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__contacts">
+          <div class="footer__address-block">
+            <h3 href="#" class="footer__subtitle">Address:</h3>
+            <span>73424</span> route, <span>4a</span><br>
+            south richmond hill, ny <span>11419</span>
+          </div>
+          <div class="footer__contacts-block">
+            <p><span class="footer__contacts-subtitle">Tel:</span> (<sup>603</sup>)<sup>_677_3400</sup></p>
+            <p><span class="footer__contacts-subtitle">Email:</span> info@yourdomain.com</p>
+            <p><span class="footer__contacts-subtitle">Web:</span> yourdomain.com</p>
+          </div>
+        </div>
+        <div class="footer__quicklinks">
+          <h3 href="#" class="footer__subtitle">Quicklinks:</h3>
+          <div class="footer__links">
+            <a href="" class="footer__link">Calender</a>
+            <a href="" class="footer__link">Maps&directions</a>
+            <a href="" class="footer__link">Our news</a>
+            <a href="" class="footer__link">University courses</a>
+            <a href="" class="footer__link">Contacs us</a>
+          </div>
+        </div>
+        <div class="footer__instagram">
+          <h3 href="#" class="footer__subtitle">Instagram:</h3>
+          <div class="footer__instagram-items">
+            <div class="footer__instagram-item"></div>
+            <div class="footer__instagram-item"></div>
+            <div class="footer__instagram-item"></div>
+            <div class="footer__instagram-item"></div>
+          </div>
         </div>
       </div>
-      <div class="footer__quicklinks">
-        <h3 href="#" class="footer__subtitle">Quicklinks:</h3>
-        <div class="footer__links">
-          <a href="" class="footer__link">Calender</a>
-          <a href="" class="footer__link">Maps&directions</a>
-          <a href="" class="footer__link">Our news</a>
-          <a href="" class="footer__link">University courses</a>
-          <a href="" class="footer__link">Contacs us</a>
+      <div class="footer__bottom">
+        <div class="footer__copyright">Copyright &copy;2017 kidz master. All rights reserved</div>
+        <div class="footer__logo">
+          <img class="footer__logo-img" src="img/logo-color.png" alt="" width="271" height="140">
         </div>
-      </div>
-      <div class="footer__instagram">
-        <h3 href="#" class="footer__subtitle">Instagram:</h3>
-        <div class="footer__instagram-items">
-          <div class="footer__instagram-item"></div>
-          <div class="footer__instagram-item"></div>
-          <div class="footer__instagram-item"></div>
-          <div class="footer__instagram-item"></div>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link">Facebook
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="footer__social-link">Twitter
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="footer__social-link">Google+
+            <i class="fa fa-google-plus" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="footer__social-link">LinkedIn
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="footer__social-link">Youtube
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          </a>
         </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="footer__copyright">Copyright &copy;2017 kidz master. All rights reserved</div>
-      <div class="footer__logo">
-        <img class="footer__logo-img" src="img/logo-color.png" alt="" width="271" height="140">
-      </div>
-      <div class="footer__social">
-        <a href="#" class="footer__social-link">Facebook
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="footer__social-link">Twitter
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="footer__social-link">Google+
-          <i class="fa fa-google-plus" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="footer__social-link">LinkedIn
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="footer__social-link">Youtube
-          <i class="fa fa-youtube-play" aria-hidden="true"></i>
-        </a>
       </div>
     </div>
   </footer>
