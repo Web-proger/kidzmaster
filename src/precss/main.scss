@@ -165,7 +165,7 @@ img {
   background-image: url("../img/slider_layer.png"),
               url("../img/cloud.png");
   background-repeat: no-repeat no-repeat;
-  background-position: bottom right, bottom -14px center;
+  background-position: bottom right, top center;
   background-size: auto, cover;
 }
 .slider__wrapper {
@@ -231,8 +231,11 @@ img {
   display: inline-block;
   width: 13px;
   height: 13px;
+  margin-left: 3px;
+  margin-right: 3px;
   border: 3px solid $main-color;
   border-radius: 9px;
+  transition-duration: 0.3s;
   &:hover {
     cursor: pointer;
   }
@@ -385,6 +388,10 @@ img {
   color: $main-color;
   text-transform: uppercase;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $link-color;
+  }
 }
 .features__btn {
   text-align: center;
@@ -579,11 +586,12 @@ img {
   display: inline-block;
   width: 13px;
   height: 13px;
+  margin-left: 3px;
+  margin-right: 3px;
   border: 3px solid $second-color;
   border-radius: 9px;
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
 .reviews-slider__input {
   display: none;
@@ -638,9 +646,15 @@ img {
   color: #808080;
   text-decoration: none;
   text-transform: uppercase;
+  &:not([class="notice__section-link notice__section-link--active"]):hover {
+    color: $link-color;
+  }
   &--active {
     color: $main-color;
     border-bottom: 2px solid $main-color;
+  }
+  @media #{$m_xs} {
+    margin-right: 20px;
   }
 }
 
@@ -703,7 +717,12 @@ img {
   color: $main-color;
   text-transform: capitalize;
   text-decoration: none;
+  &[href]:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
+
 .other__description {
   @include fonts($rob, 14, 24, 400);
   margin: 0;
@@ -762,6 +781,10 @@ img {
   @include fonts($rob, 16, 26, 500);
   color: $main-color;
   text-transform: uppercase;
+  &:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
 .footer__form-subscribe {
   text-align: center;
@@ -829,6 +852,10 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+  &:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
 }
 .footer__instagram {
   display: flex;

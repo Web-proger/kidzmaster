@@ -21,14 +21,13 @@ gulp.task('build', function () {
     gulp.src(config.src + config.css.src)
             .pipe(preproc().on('error', preproc.logError)) // Не прекращает работу при ошибке
             .pipe(gcmq())
-    /*        .pipe(autoprefixer({
+            .pipe(autoprefixer({
                 browsers: ['> 0.5%'],
                 cascade: false
             }))
             .pipe(cleanCSS({
                 level: 2
             }))
-    */
             .pipe(gulp.dest(config.src + config.css.dest))
             .pipe(browserSync.reload({
                 stream: true
