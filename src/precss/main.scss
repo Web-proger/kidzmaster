@@ -25,9 +25,18 @@ img {
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 5px 14px rgba(255, 255, 255, 0.5);
+  }
   &--invert {
     color: $second-color;
     background-color: $main-color;
+    &:hover {
+      box-shadow: 4px 5px 14px rgba(0, 164, 200, 0.7);
+    }
   }
   &--no-brad {
     border-radius: 0;
@@ -98,6 +107,12 @@ img {
   display: flex;
   justify-content: space-between;
   flex-basis: 234px;
+  li {
+    transition: 0.2s;
+  }
+  li:hover {
+    transform: scale(1.15);
+  }
   @media screen and (max-width: 920px) {
     flex-basis: 35px;
     justify-content: space-around;
@@ -120,6 +135,12 @@ img {
     margin-top: 30px;
   }
 }
+.menu__item {
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.15);
+  }
+}
 .menu__item-link {
   color: $second-color;
   text-decoration: none;
@@ -137,7 +158,102 @@ img {
 }
 
 //slider - Слайдер
-
+.slider {
+  padding-top: 148px;
+  padding-bottom: 57px;
+  background-color: $main-color;
+  background-image: url("../img/slider_layer.png"),
+              url("../img/cloud.png");
+  background-repeat: no-repeat no-repeat;
+  background-position: bottom right, bottom -14px center;
+  background-size: auto, cover;
+}
+.slider__wrapper {
+  @include wrapper();
+}
+.slider_slide {
+  display: flex;
+  justify-content: flex-end;
+  @media #{$m-xs} {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.slider__form {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider__img-block {
+  position: relative;
+  align-self: flex-start;
+  @media #{$m-md} {
+    max-width: 500px;
+  }
+  @media #{$m-sm} {
+    max-width: 320px;
+  }
+  @media #{$m-xs} {
+    margin-bottom: 20px;
+    align-self: auto;
+  }
+}
+.slider__img {
+//  max-width: 550px;
+}
+.slider__caption {
+  @include fonts($dosis, 72, 60, 700);
+  color: $main-color;
+  @media #{$m-md} {
+    font-size: 50px;
+  }
+  @media #{$m-sm} {
+    font-size: 35px;
+    line-height: 48px;
+  }
+}
+.slider__text {
+  @include fonts($dosis, 48, 60, 500);
+  color: $main-color;
+  margin-bottom: 50px;
+  @media #{$m-md} {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  @media #{$m-sm} {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+.slider__label {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 3px solid $main-color;
+  border-radius: 9px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.slider__info {
+  max-width: 555px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 53px;
+  @media #{$m-xs} {
+    margin-left: 0;
+    align-items: center;
+  }
+}
+.slider__switch {
+  display: none;
+  &:checked + label {
+    background-color: $main-color;
+  }
+}
 
 
 //welcome - блок привествия
@@ -594,6 +710,9 @@ img {
 }
 .footer__input-subscribe {
   border: 1px solid $main-color;
+  @media #{$m_xs} {
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -643,6 +762,9 @@ img {
   @include fonts($rob, 16, 26, 500);
   color: $main-color;
   text-transform: uppercase;
+}
+.footer__form-subscribe {
+  text-align: center;
 }
 .footer__subtitle {
   margin: 0;
@@ -794,5 +916,9 @@ img {
     line-height: 32px;
     color: $main-color;
     text-transform: uppercase;
+    transition-duration: 0.3s;
+    &:hover {
+      color: red;
+    }
   }
 }

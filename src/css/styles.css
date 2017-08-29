@@ -28,11 +28,22 @@ img {
   border-radius: 10px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 5px 14px rgba(255, 255, 255, 0.5);
 }
 
 .btn--invert {
   color: #ffffff;
   background-color: #00a4d3;
+}
+
+.btn--invert:hover {
+  box-shadow: 4px 5px 14px rgba(0, 164, 200, 0.7);
 }
 
 .btn--no-brad {
@@ -89,6 +100,14 @@ img {
   flex-basis: 234px;
 }
 
+.menu__user-block li {
+  transition: 0.2s;
+}
+
+.menu__user-block li:hover {
+  transform: scale(1.15);
+}
+
 .menu__link {
   color: #ffffff;
   text-decoration: none;
@@ -97,6 +116,14 @@ img {
 .menu__items {
   display: flex;
   justify-content: space-between;
+}
+
+.menu__item {
+  transition: 0.2s;
+}
+
+.menu__item:hover {
+  transform: scale(1.15);
 }
 
 .menu__item-link {
@@ -116,6 +143,85 @@ img {
 .menu__top i.fa {
   font-size: 16px;
   margin-right: 9px;
+}
+
+.slider {
+  padding-top: 148px;
+  padding-bottom: 57px;
+  background-color: #00a4d3;
+  background-image: url("../img/slider_layer.png"), url("../img/cloud.png");
+  background-repeat: no-repeat no-repeat;
+  background-position: bottom right, bottom -14px center;
+  background-size: auto, cover;
+}
+
+.slider__wrapper {
+  max-width: 1140px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+.slider_slide {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slider__form {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider__img-block {
+  position: relative;
+  align-self: flex-start;
+}
+
+.slider__caption {
+  font-family: "Dosis", "Arial", sans-serif;
+  font-size: 72px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #00a4d3;
+}
+
+.slider__text {
+  font-family: "Dosis", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 500;
+  color: #00a4d3;
+  margin-bottom: 50px;
+}
+
+.slider__label {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #00a4d3;
+  border-radius: 9px;
+}
+
+.slider__label:hover {
+  cursor: pointer;
+}
+
+.slider__info {
+  max-width: 555px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 53px;
+}
+
+.slider__switch {
+  display: none;
+}
+
+.slider__switch:checked + label {
+  background-color: #00a4d3;
 }
 
 .welcome {
@@ -693,6 +799,10 @@ img {
   text-transform: uppercase;
 }
 
+.footer__form-subscribe {
+  text-align: center;
+}
+
 .footer__subtitle {
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
@@ -824,6 +934,11 @@ img {
   line-height: 32px;
   color: #00a4d3;
   text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+
+.footer__social i.fa:hover {
+  color: red;
 }
 
 @media screen and (max-width: 1100px) {
@@ -859,6 +974,24 @@ img {
   .header__logo {
     width: 33%;
     margin-right: 5%;
+  }
+
+  .slider__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .slider__img-block {
+    max-width: 500px;
+  }
+
+  .slider__caption {
+    font-size: 50px;
+  }
+
+  .slider__text {
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .welcome__wrapper {
@@ -1000,6 +1133,26 @@ img {
     align-self: center;
   }
 
+  .slider__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .slider__img-block {
+    max-width: 320px;
+  }
+
+  .slider__caption {
+    font-size: 35px;
+    line-height: 48px;
+  }
+
+  .slider__text {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
   .welcome__wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -1097,6 +1250,26 @@ img {
     flex-wrap: wrap;
   }
 
+  .slider__wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .slider_slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider__img-block {
+    margin-bottom: 20px;
+    align-self: auto;
+  }
+
+  .slider__info {
+    margin-left: 0;
+    align-items: center;
+  }
+
   .welcome {
     padding-top: 20px;
   }
@@ -1151,6 +1324,10 @@ img {
   .other__wrapper {
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  .footer__input-subscribe {
+    margin-bottom: 10px;
   }
 
   .footer__wrapper {

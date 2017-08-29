@@ -79,14 +79,26 @@
   </header>
   <main>
     <section class="slider">
-      <div class="slider_slide">
-        <img src="img/slide2.jpg" alt="" width="769" height="663">
+      <div class="slider__wrapper">
+        <div class="slider_slide">
+          <div class="slider__img-block">
+            <img class="slider__img" src="img/slide2.jpg" alt="" width="769" height="663">
+            <form class="slider__form" action="">
+              <input class="slider__switch" id="slider__slide1" type="radio" name="slider-switch">
+              <label class="slider__label" for="slider__slide1"></label>
+              <input class="slider__switch" id="slider__slide2" type="radio" name="slider-switch" checked>
+              <label class="slider__label" for="slider__slide2"></label>
+              <input class="slider__switch" id="slider__slide3" type="radio" name="slider-switch">
+              <label class="slider__label" for="slider__slide3"></label>
+            </form>
+          </div>
+          <div class="slider__info">
+            <div class="slider__caption">Play. Learn. Grow.</div>
+            <div class="slider__text">Your neighborhood preschool</div>
+            <button class="btn btn--invert slider__btn">Admission now</button>
+          </div>
+        </div>
       </div>
-      <form action="">
-        <input class="slider__switch" type="radio" name="slider-switch">
-        <input class="slider__switch" type="radio" name="slider-switch" checked>
-        <input class="slider__switch" type="radio" name="slider-switch">
-      </form>
     </section>
     <section class="welcome">
       <div class="welcome__wrapper">
@@ -258,12 +270,12 @@
           <div class="reviews-slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, blanditiis deleniti expedita illum impedit ipsa ipsam ipsum iure maxime modi nam nulla praesentium provident quod ratione similique, veniam?</div>
         </div>
         <form class="reviews-slider__form" action="">
-          <input class="reviews-slider__input" id="slide1" type="radio" name="reviews-switch">
-          <label class="reviews-slider__label" for="slide1"></label>
-          <input class="reviews-slider__input" id="slide2" type="radio" name="reviews-switch" checked>
-          <label class="reviews-slider__label" for="slide2"></label>
-          <input class="reviews-slider__input" id="slide3" type="radio" name="reviews-switch">
-          <label class="reviews-slider__label" for="slide3"></label>
+          <input class="reviews-slider__input" id="reviews-slide1" type="radio" name="reviews-switch">
+          <label class="reviews-slider__label" for="reviews-slide1"></label>
+          <input class="reviews-slider__input" id="reviews-slide2" type="radio" name="reviews-switch" checked>
+          <label class="reviews-slider__label" for="reviews-slide2"></label>
+          <input class="reviews-slider__input" id="reviews-slide3" type="radio" name="reviews-switch">
+          <label class="reviews-slider__label" for="reviews-slide3"></label>
         </form>
       </div>
     </section>
@@ -304,7 +316,7 @@
       <div class="other__wrapper">
         <div class="other__items">
           <div class="other__item other__item--ico-house">
-            <a class="other__caption" href="#">Kidz master address</a>
+            <a class="other__caption">Kidz master address</a>
             <p class="other__description ">73724 route, 4a <br> south richmond hill, NY 11419</p>
           </div>
           <div class="other__item other__item--ico-notice">
@@ -312,7 +324,7 @@
             <p class="other__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div class="other__item other__item--ico-clock">
-            <a class="other__caption" href="#">Office hour</a>
+            <a class="other__caption">Office hour</a>
             <p class="other__description">Monday-Friday <br> 9:00am-5:00pm</p>
           </div>
           <div class="other__item other__item--ico-book">
